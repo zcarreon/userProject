@@ -5,3 +5,4 @@ https://www.w3schools.com/php/php_if_else.asp
 //GUIDES FOR CREATING USERS//
 https://www.w3schools.com/php/php_ref_mail.asp
 https://stackoverflow.com/questions/6101956/generating-a-random-password-in-php // http://codepad.org/UL8k4aYK
+https://secure.php.net/manual/en/function.password-hash.php // https://secure.php.net/manual/en/function.password-verify.php

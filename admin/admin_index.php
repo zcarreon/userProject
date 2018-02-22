@@ -26,6 +26,6 @@
     echo "<h3>Last login was on {$_SESSION['user_date']}</h3>";
   ?>
   <a href="admin_usercreate.php">Create a User</a>
-  <a href="phpscripts/caller.php?caller_id=logout">Sign Out</a>
+  <a href="phpscripts/caller.php?caller_id=logout">Sign Out</a
 </body>
 </html>

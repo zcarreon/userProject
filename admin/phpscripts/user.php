@@ -12,7 +12,8 @@
       return implode($pass); //Turns $pass into a string
     }
     $password = randomPass(); //passes on the random password to the password variable
-    $userString = "INSERT INTO tbl_user VALUES(NULL, '{$fname}', '{$username}', '{$password}', '{$email}', DEFAULT, '{$userLV}', 'no')";
+    $codePass = password_hash($password, PASSWORD_DEFAULT); //This encrypts the password. IMPORTANT: I couldn't figure out how to login with the accounts with the encrypted passwords. I think what I have to do is go into login.php and add a line that encrypts the submitted password, and then compare that to the password in the database. I also think password_verify is also involved somehow.
+    $userString = "INSERT INTO tbl_user VALUES(NULL, '{$fname}', '{$username}', '{$codePass}', '{$email}', DEFAULT, '{$userLV}', 'no')";
     $userQuery = mysqli_query($link, $userString);
     if($userQuery){
       mail("{$email}","Your new login","Username : {$username}\nPassword : {$password}\nURL : localhost/admin/admin_login.php"); //This is what I have for the email function. After lots of research, I found that email functions don't work on a localhost server. Because of that, I have no way of testing whether or not this works without putting it on a live server.
