@@ -5,13 +5,13 @@
   if(isset($_POST["submit"])){
     $fname = trim($_POST["fname"]);
     $username = trim($_POST["username"]);
-    $password = trim($_POST["password"]);
+    //$password = trim($_POST["password"]);
     $email = trim($_POST["email"]);
     $userLV = $_POST["userLV"];
     if(empty($userLV)){
       $message = "<h3>Please select a user level.</h3>";
     }else{
-      $result = createUser($fname, $username, $password, $email, $userLV);
+      $result = createUser($fname, $username, $email, $userLV); //$password //<This goes between $username and $email if necessary
       $message = $result;
     }
   }
@@ -33,7 +33,7 @@
   <form action="admin_usercreate.php" method="post">
     <input type="text" name="fname" placeholder="First Name" value="<?php if(!empty($fname)){echo $fname;}?>">
     <input type="text" name="username" placeholder="Username" value="<?php if(!empty($username)){echo $username;}?>">
-    <input type="text" name="password" placeholder="Password" value="<?php if(!empty($password)){echo $password;}?>">
+    <!--<input type="text" name="password" placeholder="Password" value="<?php if(!empty($password)){echo $password;}?>">-->
     <input type="text" name="email" placeholder="Email" value="<?php if(!empty($email)){echo $email;}?>">
     <select name="userLV">
       <option value="">Please Select a User Level.</option>
