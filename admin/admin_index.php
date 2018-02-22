@@ -2,6 +2,7 @@
   //ini_set('display_errors',1); //for MAC
   //error_reporting(E_ALL);
   require_once('phpscripts/config.php');
+  confim_logged_in();
 ?>
 <!doctype html>
 <html>
@@ -24,5 +25,7 @@
     }
     echo "<h3>Last login was on {$_SESSION['user_date']}</h3>";
   ?>
+  <a href="admin_createuser.php">Create a User</a>
+  <a href="phpscripts/caller.php?caller_id=logout">Sign Out</a>
 </body>
 </html>

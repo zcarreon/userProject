@@ -9,7 +9,7 @@
     $email = trim($_POST["email"]);
     $userLV = $_POST["userLV"];
     if(empty($userLV)){
-      $message = "Please select a user level.";
+      $message = "<h3>Please select a user level.</h3>";
     }else{
       $result = createUser($fname, $username, $password, $email, $userLV);
       $message = $result;
@@ -30,7 +30,7 @@
       echo $message;
     }
   ?>
-  <form action="admin_createuser.php" method="post">
+  <form action="admin_usercreate.php" method="post">
     <input type="text" name="fname" placeholder="First Name" value="<?php if(!empty($fname)){echo $fname;}?>">
     <input type="text" name="username" placeholder="Username" value="<?php if(!empty($username)){echo $username;}?>">
     <input type="text" name="password" placeholder="Password" value="<?php if(!empty($password)){echo $password;}?>">
@@ -40,6 +40,7 @@
       <option value="1">Web Admin</option>
       <option value="2">Web Master</option>
     </select>
+    <br>
     <input type="submit" name="submit" value="Create User">
   </form>
 </body>
