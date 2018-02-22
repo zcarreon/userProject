@@ -20,7 +20,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Create User</title>
+<title>Create a User</title>
 <link href="css/main.css" rel="stylesheet">
 </head>
 <body>

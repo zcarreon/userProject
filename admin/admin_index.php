@@ -2,7 +2,7 @@
   //ini_set('display_errors',1); //for MAC
   //error_reporting(E_ALL);
   require_once('phpscripts/config.php');
-  confim_logged_in();
+  confirm_logged_in();
 ?>
 <!doctype html>
 <html>
